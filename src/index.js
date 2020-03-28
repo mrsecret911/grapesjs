@@ -3,6 +3,7 @@ import Editor from './editor';
 import { isElement, isFunction } from 'underscore';
 import polyfills from 'utils/polyfills';
 import PluginManager from './plugin_manager';
+import ckeEditor from './gjs-plugin-ckeditor';
 
 polyfills();
 
@@ -13,7 +14,7 @@ const defaultConfig = {
   autorender: 1,
 
   // Array of plugins to init
-  plugins: [],
+  plugins: [ckeEditor],
 
   // Custom options for plugins
   pluginsOpts: {}
